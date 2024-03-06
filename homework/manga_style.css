@@ -1,0 +1,18 @@
+.text-center{
+    text-align: center;
+}
+
+li{
+    list-style: none;
+    text-align: center;
+}
+
+.title-style{
+    font-size: 40px;
+    color:cyan;
+}
+
+.text-style{
+    font-size: 20px;
+    color:rgb(224, 155, 70);
+}

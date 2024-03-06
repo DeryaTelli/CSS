@@ -1,0 +1,36 @@
+/* class-> .text-red{} */
+/* id->   #text-red{} */
+/* bazi standart degerleriniz var ise onlara ozel class olusturp bunlari beirtebilirsiniz  */
+
+h1,h2,h3,h4,h5,h6{
+    color:#876f6f;
+}
+
+
+h1{
+    font-size:30px;
+}
+p{
+    font-size:20px;
+}
+
+#first-article{
+    font-size:50px;
+}
+
+
+
+
+.text-red{
+    color:red;
+}
+
+.fs-14{
+    font-size: 14px;
+} 
+.fs-20{
+    font-size: 20px;
+}
+.fs-30{
+    font: size 30px;
+}
