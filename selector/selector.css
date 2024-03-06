@@ -1,0 +1,37 @@
+/* css selector  */
+
+.color-blue.fw-normal{
+    color:rgb(98, 158, 211);
+    font-weight: normal;
+/* bu classi ayni anda kullanmalisin  */
+}
+
+.color-red .fw-light{
+    color:red;
+    font-weight:lighter ;
+    /* bu classida ic ice yazdigin yapilarda kullanmalisin
+     dis daki etikete color-red ic deki etikete fw-light yazmalisin  */
+
+}
+
+/* ul>li diyerekde yazabilirsin sadece li de kullanabilirsin  */
+/* tum listede yapar bunu senin ekstra ozellik vermediklerin haric */
+ul>li:first-child{ 
+    color:purple;
+}
+li:last-child{
+    color:aquamarine
+}
+
+li:nth-child(2){
+    background: brown;
+}
+
+li:nth-child(odd){
+    /* sadece tek sayilarin back groundunu boyayacaktir */
+    background: yellowgreen;
+}
+li:nth-child(even){
+    /* sadece cift sayilarin back groundunu boyayacaktir */
+    background:darkorchid;
+}
