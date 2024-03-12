@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1.hidden{
+            visibility: hidden;
+        }
+        h2{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- bir elemani gizlemek icin display ozelligini none yaparak yada visibility ozelligini hidden yaparak gerceklestirilir
+        visibility hidden atamasi elemani gisler ancak eleman sayfada ayni yeri kaplar 
+        display: none bir elemani gizler herhangi bir bosluk ayirmaz eleman gizlenecek ve sayfada eleman yokmus gibi gorunecektir 
+    -->
+    <h1>Gorunur Baslik</h1>
+    <h1 class="hidden">Gorunmez Baslik</h1>
+    <p>gorunmez baslik yinede yer kapliyor</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, ducimus!</p>
+    <h2>Gorunmez display baslik</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, delectus.</p>
+</body>
+</html>

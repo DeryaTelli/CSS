@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.bir{
+            border-style:dashed;
+            border-width:6px;
+        }
+        p.iki{
+            border-style:solid;
+            border-width:medium;
+            border-color:cyan;
+        }
+        p.uc{
+            border-style:dotted;
+            border-width:2px;
+        }
+        p.dort{
+            /* farkli kenarlari bu sekilde de gosterebilirim */
+            border-style: dotted solid double dashed;
+            /* border-top-style:groove;
+            border-right-style: ridge;
+            border-bottom-style: inset;
+            border-outset-style:solid; */
+            border-color: brown;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        dashed:kalin  kesikli cizgi ile sinir belirler
+        none:sinir kaldirir
+        dotted: noktali bir sinir belirler 
+        solid: kati sinir cizgisi belirler
+        double: iki sinir taimlar Her iki sinir cizgisi de border-width degeriyle belirlenir
+        groove: 3d ve disa donuk sinir cizgisi tanimlar olusacak etkinin derecesi border-color ozelligine baglidir 
+        ridge: 3d ortalanmis sinir cigzisi tanimlanir etki derecesi border-colora bagli 
+        inset: 3d ice donuk bicimde sinir cizgisi belirler etkinin derecesi border-color degerine baglidir 
+        outset:3d tamamen disa donuk sinir cizgisi tanimlar etkinin derecesi border-color degerine baglidir 
+    -->
+    <p class="dort">3D style kullanildi </p>
+    <p class="bir"> HTML Lesson </p>
+    <p class="iki"> CSS Lesson</p>
+    <p class="uc">JavaScript Lesson</p>
+    <p><b>Not:</b> lessons are available to everyone</p>
+</body>
+</html>
