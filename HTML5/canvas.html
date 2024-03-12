@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canv{
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canv" width="150" height="100"></canvas>
+    <!-- 150 genisliginde 100 yuksekliginde kutu olusturucaktir  -->
+    <canvas id="c"></canvas>
+    <script>
+        var canvas=document.getElementById("c"),
+        context=canvas.getContext("2d");
+        context.fillStyle='blue';
+        context.fillRect(10,20,200,100);
+        context.strokeStyle='yellow';
+        context.linkeWidth=6;
+        context.lineCap="round";
+        context.arc(40,30,40,0,Math.PI,false);
+        context.stroke();
+    </script>
+    <svg height="150" width="150">
+        <circle cx="75" cy="75" r="60" stroke="blue" stroke-width="6" fill="yellow" />
+    </svg>
+</body>
+</html>

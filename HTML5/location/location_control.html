@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="user_try">User Location:</p>
+    <button onclick="getuserLocation()">Location Control</button>
+    <div id="har_try"></div>
+    <script>
+        var x=document.getElementById("user_try");
+        function getuserLocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showuserPosition, showbrowserError);
+            }else{
+                c.innerHTML="Browser Doesn't Support Geolocation";
+
+            }
+        }
+        function showuserPosition(position){
+            var latlon=position.coords.latitude+","+position.coords.longitude;
+            var img_url="http://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false";
+            document.getElementById(har_try).innerHTML="<img src='"+img_url+"'>";
+        }function showbrowserError(error){
+            switch(error.code){
+                case error.PERMISSION_DENIED:
+                    x.innerHTML="User reject location request "
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML="There is not location information"
+                    break;
+                case error.TIMEOUT: 
+                    x.innerHTML="Time out"  
+                    break;  
+                case error.UNKNOWN_ERROR:
+                    x.innerHTML="Unknown Error"
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

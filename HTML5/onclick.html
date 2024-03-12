@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // bu kodun aynisini gerceklestiren alternatif kod eklemesi 
+        //document.addEventListener('click',KOPYA,false);
+        function KOPYA(){
+            document.getElementById("area2").value=document.getElementById("area1").value;
+            document.getElementById("area3").value=document.getElementById("area1").value;
+        }
+    </script>
+</head>
+<body>
+    1.AREA <input type="text" id="area1" value="MY beautiful home town turkiye..."> <br>
+    2.AREA <input type="text" id="area2">
+    3.AREA <input type="text"  id="area3"> <br><br>
+    <button onclick="KOPYA()">Copy text</button>
+
+    <!-- dugmeye tiklaninda 1 alanindan 3 ve 3 kopyalama yapiliyor  -->
+</body>
+</html>
