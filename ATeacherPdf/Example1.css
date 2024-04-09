@@ -1,7 +1,43 @@
 p {
 color: cyan;
 /* renk kullanma bicimleri 
-1- color: #00FF00#
-
+1- color: #00FF00 kisaltma = #0F0 cift karakterleri  1 e dusuruyoruz 
+2- rgb(255,0,0)
+3- rgba(255,0,0,0.5)
+4- hsl(0,100%,50%)
+5- hsla(0,100%,50%,0.5)
 */
 }
+
+/* mevcut bir ozniteligi hedeflemek icin bu sekilde kullanim yapabiliriz;
+p[class="myclass"] {
+    paragraf etiketi ama classi myclass olanlari alir sadece 
+}
+  */
+
+
+/* BASKA ORNEK ISE DIL KULLANIMINI VURGULANAN YERLE ULASMAK ICIN KULLANILIR
+p[lang="en"] {
+color: blue;
+(İngilizce metinler mavi renkte) 
+}
+
+p[lang="fr"] {
+color: red;
+(Fransızca metinler kırmızı renkte )
+}
+
+p[lang="de"] {
+font-family: "Arial", sans-serif; 
+(Almanca metinler Arial fontuyla yazılmış olacak)
+ */
+
+
+p,.blue,#first,div span{
+    /* p etiketi ama clasi blue olan ve idsi first olan onun icindeki 
+    div etiketinin icindeki her span icin gecerlidir  */
+    color:blue;
+}
+
+
+

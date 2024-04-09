@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        /* STATIC POSITION */
+        p {
+            position: static;
+            /* static poziyonlandirima ile yerlestirilmistir 
+            oge belge akisindaki normal konumunda yer alir ve diger ogeler onun etrakinda yer alir  */
+            background-color: lightblue;
+            padding: 10px;
+        }
+        /* RELATIVE POSITION */
+        .container {
+            position: relative;
+            /* Bir öğe göreceli pozisyonlandırma ile konumlandırıldığında, normal belge akışında olur,
+            ancak kendinden önce gelen öğeye göre konumlandırma yapılır. Yani, öğenin konumu, normal konumundan göreceli olarak ayarlanabilir, 
+            ancak diğer öğeler bu pozisyon değişikliğinden etkilenmez. */
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+        }
+        .box {
+            position: relative;
+            top: 50px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+
+        /* ABSOLUTE POSITION  */
+        .containerA {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+        }
+        .boxA {
+            position: absolute;
+            /* normal belge akışından çıkar ve en yakın konumlandırılmış üst öğeye göre konumlandırılır. 
+            Bu, sayfanın farklı bir kısmında veya bir konteyner içinde istenilen yere yerleştirilmesini sağlar. 
+            Diğer öğeler, mutlak olarak konumlandırılmış bir öğeyi dikkate almadan normal şekilde konumlandırılır. */
+            top: 50px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+
+        /* FIXED POSITION  */
+        .navbar {
+            position: fixed;
+            /* Bir öğe sabit pozisyonlandırma ile konumlandırıldığında, pencerenin görünen kısmına göre sabitlenir. 
+            Bu, kullanıcı sayfayı kaydırdığında bile öğenin sabit kalmasını sağlar. 
+            Genellikle gezinme menüleri veya reklamlar gibi belirli öğelerin sayfanın üstünde veya altında sabitlenmesi için kullanılır. */
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            color: white;
+            text-align: center;
+        }
+
+        /* INHERIT POSITION  */
+        .containerB {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+        }
+        .boxB {
+            position: inherit; /* Miras alma */
+            /*bir öğenin pozisyonlandırma özelliğinin, doğrudan üst öğesinden miras aldığı anlamına gelir. 
+            Eğer üst öğe belirli bir pozisyonlandırma türüne sahipse, 
+            alt öğeler varsayılan olarak aynı pozisyonlandırma türünü alır. */
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <!-- STATIC POSITION EXAMPLE -->
+    <p>This is a paragraph with static positioning.</p>
+    <p>This is another paragraph.</p>
+
+    <!-- RELATIVE POSITION EXAMPLE -->
+    <div class="container">
+        <div class="box">Lorem ipsum dolor sit amet consectetur.</div>
+    </div>
+    <br><br><br>
+
+    <!-- ABSOLUTE POSITION EXAMPLE -->
+    <div class="containerA">
+        <div class="boxA">Lorem ipsum dolor sit amet consectetur.</div>
+    </div>
+
+    <!-- FIXED POSITION EXAMPLE -->
+    <!-- uste sabitli kalmasini sagliyor  -->
+    <div class="navbar">
+        <a href="#">Anasayfa</a>
+        <a href="#">Hakkımızda</a>
+        <a href="#">Hizmetler</a>
+        <a href="#">İletişim</a>
+    </div>
+    <div style="height: 1000px;">
+        <!-- Dummy content to create scrolling -->
+    </div>
+
+    <!-- INHERIT POSITION EXAMPLE -->
+    <div class="containerB">
+        <div class="boxB">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, voluptas?</div>
+    </div>
+
+
+</body>
+</html>
